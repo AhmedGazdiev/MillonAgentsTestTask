@@ -12,7 +12,7 @@ export class TreeNodeComponent {
   public readonly node = input.required<TreeNode>()
   public isOpen = false;
 
-  public toggleExpand(): void {
+  public toggleOpen(): void {
     if (this.hasChildren()) {
       this.isOpen = !this.isOpen;
     }

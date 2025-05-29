@@ -1,5 +1,5 @@
 <div class="tree-node" [class.deleted]="node().is_deleted">
-  <div class="node-container" (click)="toggleExpand()">
+  <div class="node-container" (click)="toggleOpen()">
     
     @if (hasChildren()) {
       <span class="arrow">{{ isOpen ? '▼' : '▶' }}</span>
