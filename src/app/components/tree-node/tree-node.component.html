@@ -1,0 +1,19 @@
+<div class="tree-node" [class.deleted]="node().is_deleted">
+  <div class="node-container" (click)="toggleExpand()">
+    
+    @if (hasChildren()) {
+      <span class="arrow">{{ isOpen ? '▼' : '▶' }}</span>
+    }
+    <span class="node-content">
+      {{ node().id }} - {{ node().title }}
+    </span>
+  </div>
+  
+  @if (isOpen && hasChildren()) {
+    <div class="children">
+      @for (node of node().children; track node.id) {
+        <tree-node [node]="node" />
+      }
+    </div>
+  }
+</div>

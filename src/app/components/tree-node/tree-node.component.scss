@@ -1,0 +1,37 @@
+.tree-node {
+  margin-left: 20px;
+  cursor: pointer;
+  padding: 2px 0;
+}
+
+.node-container {
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  transition: background-color .3s ease-in-out;
+
+  &:hover {
+  background-color: #f0f0f0;
+}
+}
+
+.arrow {
+  margin-right: 5px;
+  font-size: 12px;
+}
+
+.node-content {
+  font-size: 14px;
+}
+
+.children {
+  margin-left: 15px;
+  border-left: 1px dotted #ccc;
+  padding-left: 5px;
+  color: #000;
+}
+
+.deleted {
+  color: #999;
+  font-style: italic;
+}
